@@ -2,7 +2,8 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
 
 body {
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; 
   margin: auto;
   max-width: 960px;
   
@@ -45,17 +46,27 @@ header div.inner-left {
 }
 
 nav.main-menu {
-  background: #E6E6E6;
   height: 30px;
   line-height: 30px;
   margin-top: 10px;
   width: 100%;
 }
+
 nav.main-menu li {
+  background: #E6E6E6;
   float: left;
   text-align: center;
-  width: 33%;
+  margin-right: 2px;
+  width: 32%;
 }
+
+nav.main-menu li:last-of-type { float: right; margin: 0; width: 35; }
+
+nav.main-menu li:hover { background: #666;}
+
+nav.main-menu li:hover a { color: #FFF;}
+
+
 
 nav.post-filter {
   float: right;
@@ -84,8 +95,19 @@ nav.post-filter li:hover {
   position: relative;
 }
 
+section {
+  height: 500px;
+  max-width: 960px;
+  overflow: hidden;
+}
+
 article { 
-  margin: 0 12.5%;
+  /*margin: 0 120px;*/
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  left: 120px;
+  right: 120px;
 }
 
 div.article-title {
@@ -137,22 +159,34 @@ div.image {
   width: 35%;
 }
 
-nav.left-arrow {
+
+div.footer {
+  background: #CCCCCC;
+  height: 200px;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  width: 720px;
+
+}
+
+nav.prev {
   position: fixed;
   top: 70%;
   left: 5%;
 }
 
-nav.right-arrow {
+nav.next {
   position: fixed;
   top: 70%;
   right: 5%;
 }
 
-/*.active {
-  display: block;
+.active {
 }
 
 .inactive {
   display: none;
 }*/
+
+
+
